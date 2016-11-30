@@ -1,4 +1,10 @@
-﻿using System;
+﻿/*
+ * Name: Kayla Wiest and Stacey Stewart
+ * Date: Nov 30, 2015
+ * Purpose: Allows user to input a Employee Name, Number, and Hours worked.
+ *          Once all input fields are entered, save the new entry to a document.
+ */ 
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -17,9 +23,10 @@ namespace Assignment_KaylaStacey
             InitializeComponent();
         }
 
-        private void groupBox1_Enter(object sender, EventArgs e)
+        private void btnExit_Click(object sender, EventArgs e)
         {
-
+            //Close application
+            Application.Exit();
         }
     }
 }

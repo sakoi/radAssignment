@@ -8,3 +8,13 @@ D:\Georgian College\Term 3\3. R.A.D\Assignment\Assignment_KaylaStacey\Assignment
 D:\Georgian College\Term 3\3. R.A.D\Assignment\Assignment_KaylaStacey\Assignment_KaylaStacey\obj\Debug\Assignment_KaylaStacey.exe
 D:\Georgian College\Term 3\3. R.A.D\Assignment\Assignment_KaylaStacey\Assignment_KaylaStacey\obj\Debug\Assignment_KaylaStacey.pdb
 D:\Georgian College\Term 3\3. R.A.D\Assignment\Assignment_KaylaStacey\Assignment_KaylaStacey\obj\Debug\Assignment_KaylaStacey.frmOutput.resources
+C:\Users\muyx\Documents\Assignment\Assignment_KaylaStacey\Assignment_KaylaStacey\bin\Debug\Assignment_KaylaStacey.exe.config
+C:\Users\muyx\Documents\Assignment\Assignment_KaylaStacey\Assignment_KaylaStacey\obj\Debug\Assignment_KaylaStacey.exe
+C:\Users\muyx\Documents\Assignment\Assignment_KaylaStacey\Assignment_KaylaStacey\obj\Debug\Assignment_KaylaStacey.pdb
+C:\Users\muyx\Documents\Assignment\Assignment_KaylaStacey\Assignment_KaylaStacey\bin\Debug\Assignment_KaylaStacey.exe
+C:\Users\muyx\Documents\Assignment\Assignment_KaylaStacey\Assignment_KaylaStacey\bin\Debug\Assignment_KaylaStacey.pdb
+C:\Users\muyx\Documents\Assignment\Assignment_KaylaStacey\Assignment_KaylaStacey\obj\Debug\Assignment_KaylaStacey.csprojResolveAssemblyReference.cache
+C:\Users\muyx\Documents\Assignment\Assignment_KaylaStacey\Assignment_KaylaStacey\obj\Debug\Assignment_KaylaStacey.frmInput.resources
+C:\Users\muyx\Documents\Assignment\Assignment_KaylaStacey\Assignment_KaylaStacey\obj\Debug\Assignment_KaylaStacey.frmOutput.resources
+C:\Users\muyx\Documents\Assignment\Assignment_KaylaStacey\Assignment_KaylaStacey\obj\Debug\Assignment_KaylaStacey.Properties.Resources.resources
+C:\Users\muyx\Documents\Assignment\Assignment_KaylaStacey\Assignment_KaylaStacey\obj\Debug\Assignment_KaylaStacey.csproj.GenerateResource.Cache

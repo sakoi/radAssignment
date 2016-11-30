@@ -137,6 +137,7 @@
             this.btnExit.TabIndex = 15;
             this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnNext
             // 
@@ -170,6 +171,7 @@
             this.Name = "frmOutput";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Output Form";
+            this.Load += new System.EventHandler(this.frmOutput_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 

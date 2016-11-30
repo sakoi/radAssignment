@@ -30,12 +30,12 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.grpEmployeeInformation = new System.Windows.Forms.GroupBox();
+            this.txtHours = new System.Windows.Forms.TextBox();
+            this.txtNumber = new System.Windows.Forms.TextBox();
+            this.txtName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.txtName = new System.Windows.Forms.TextBox();
-            this.txtNumber = new System.Windows.Forms.TextBox();
-            this.txtHours = new System.Windows.Forms.TextBox();
             this.btnSave = new System.Windows.Forms.Button();
             this.btnDone = new System.Windows.Forms.Button();
             this.btnClear = new System.Windows.Forms.Button();
@@ -68,7 +68,36 @@
             this.grpEmployeeInformation.TabIndex = 1;
             this.grpEmployeeInformation.TabStop = false;
             this.grpEmployeeInformation.Text = "Please provide the employee\'s information";
-            this.grpEmployeeInformation.Enter += new System.EventHandler(this.groupBox1_Enter);
+            // 
+            // txtHours
+            // 
+            this.txtHours.Location = new System.Drawing.Point(196, 132);
+            this.txtHours.Name = "txtHours";
+            this.txtHours.Size = new System.Drawing.Size(76, 22);
+            this.txtHours.TabIndex = 5;
+            // 
+            // txtNumber
+            // 
+            this.txtNumber.Location = new System.Drawing.Point(196, 88);
+            this.txtNumber.Name = "txtNumber";
+            this.txtNumber.Size = new System.Drawing.Size(144, 22);
+            this.txtNumber.TabIndex = 3;
+            // 
+            // txtName
+            // 
+            this.txtName.Location = new System.Drawing.Point(196, 47);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(300, 22);
+            this.txtName.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(36, 132);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 17);
+            this.label4.TabIndex = 4;
+            this.label4.Text = "&Hours Worked";
             // 
             // label3
             // 
@@ -87,36 +116,6 @@
             this.label2.Size = new System.Drawing.Size(111, 17);
             this.label2.TabIndex = 0;
             this.label2.Text = "Employee &Name";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(36, 132);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 17);
-            this.label4.TabIndex = 4;
-            this.label4.Text = "&Hours Worked";
-            // 
-            // txtName
-            // 
-            this.txtName.Location = new System.Drawing.Point(196, 47);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(300, 22);
-            this.txtName.TabIndex = 1;
-            // 
-            // txtNumber
-            // 
-            this.txtNumber.Location = new System.Drawing.Point(196, 88);
-            this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Size = new System.Drawing.Size(144, 22);
-            this.txtNumber.TabIndex = 3;
-            // 
-            // txtHours
-            // 
-            this.txtHours.Location = new System.Drawing.Point(196, 132);
-            this.txtHours.Name = "txtHours";
-            this.txtHours.Size = new System.Drawing.Size(76, 22);
-            this.txtHours.TabIndex = 5;
             // 
             // btnSave
             // 
@@ -153,6 +152,7 @@
             this.btnExit.TabIndex = 5;
             this.btnExit.Text = "E&xit";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // label5
             // 
