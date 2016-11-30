@@ -41,6 +41,7 @@
             this.btnClear = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
+            this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.grpEmployeeInformation.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -75,6 +76,7 @@
             this.txtHours.Name = "txtHours";
             this.txtHours.Size = new System.Drawing.Size(76, 22);
             this.txtHours.TabIndex = 5;
+            this.txtHours.Tag = "Hours Worked";
             // 
             // txtNumber
             // 
@@ -82,6 +84,7 @@
             this.txtNumber.Name = "txtNumber";
             this.txtNumber.Size = new System.Drawing.Size(144, 22);
             this.txtNumber.TabIndex = 3;
+            this.txtNumber.Tag = "Employee Number";
             // 
             // txtName
             // 
@@ -89,6 +92,7 @@
             this.txtName.Name = "txtName";
             this.txtName.Size = new System.Drawing.Size(300, 22);
             this.txtName.TabIndex = 1;
+            this.txtName.Tag = "Employee Name";
             // 
             // label4
             // 
@@ -125,6 +129,7 @@
             this.btnSave.TabIndex = 2;
             this.btnSave.Text = "&Save";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // btnDone
             // 
@@ -134,6 +139,7 @@
             this.btnDone.TabIndex = 4;
             this.btnDone.Text = "&Done";
             this.btnDone.UseVisualStyleBackColor = true;
+            this.btnDone.Click += new System.EventHandler(this.btnDone_Click);
             // 
             // btnClear
             // 
@@ -143,6 +149,7 @@
             this.btnClear.TabIndex = 3;
             this.btnClear.Text = "&Clear";
             this.btnClear.UseVisualStyleBackColor = true;
+            this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
             // btnExit
             // 
@@ -164,11 +171,17 @@
             this.label5.TabIndex = 6;
             this.label5.Text = "Kayla Wiest and Stacey Stewart";
             // 
+            // saveFileDialog1
+            // 
+            this.saveFileDialog1.OverwritePrompt = false;
+            // 
             // frmInput
             // 
+            this.AcceptButton = this.btnSave;
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Control;
+            this.CancelButton = this.btnExit;
             this.ClientSize = new System.Drawing.Size(582, 423);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnExit);
@@ -183,6 +196,8 @@
             this.Name = "frmInput";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Input Form";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmInput_FormClosing);
+            this.Load += new System.EventHandler(this.frmInput_Load);
             this.grpEmployeeInformation.ResumeLayout(false);
             this.grpEmployeeInformation.PerformLayout();
             this.ResumeLayout(false);
@@ -205,6 +220,7 @@
         private System.Windows.Forms.Button btnClear;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Label label5;
+        private System.Windows.Forms.SaveFileDialog saveFileDialog1;
     }
 }
 
