@@ -21,6 +21,7 @@ namespace Assignment_KaylaStacey
     {
 
         private StreamWriter employeeStreamWriter;
+        private String path;
 
         public frmInput()
         {
@@ -41,8 +42,7 @@ namespace Assignment_KaylaStacey
         {
             //run save file dialog box
             saveFileDialog();
-        
-           
+            
         }
 
         private bool IsValidData()
@@ -60,6 +60,7 @@ namespace Assignment_KaylaStacey
             //save file dialog and prompts to user to select file
             DialogResult result;
 
+
             //set saveFileDialog settings
             saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
             saveFileDialog1.DefaultExt = "txt";
@@ -73,9 +74,14 @@ namespace Assignment_KaylaStacey
             {
                 try
                 {
+
                     //Creates file or appends to existing file
                     employeeStreamWriter = new StreamWriter(saveFileDialog1.FileName, true);
-
+                    
+                    //find file path
+                    path = Path.GetFullPath(saveFileDialog1.FileName);
+                   // MessageBox.Show(path);
+                  
 
                 }
                 catch (Exception ex1)
@@ -83,6 +89,8 @@ namespace Assignment_KaylaStacey
                     MessageBox.Show(ex1.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
+                //set windowstate to normal (fix minimized bug)
+               this.WindowState = FormWindowState.Normal;
 
             }
             else
@@ -102,10 +110,16 @@ namespace Assignment_KaylaStacey
             txtName.Focus();
         }
 
+        //
+
+
         private void btnDone_Click(object sender, EventArgs e)
         {
+            employeeStreamWriter.Close();
+
             //Hid Input form and Shows Output form
             frmOutput outputForm = new frmOutput();
+            outputForm.filePath = path;
             this.Hide();
             outputForm.Show();
         }
@@ -118,7 +132,9 @@ namespace Assignment_KaylaStacey
                 //If ok, write inputs into StreamWriter, clear textboxes, and displays message to user on success
                 try
                 {
-                    employeeStreamWriter.WriteLine(txtName.Text + " " + txtNumber.Text + " " + txtHours.Text);
+                    employeeStreamWriter.WriteLine(txtName.Text);
+                    employeeStreamWriter.WriteLine(txtNumber.Text);
+                    employeeStreamWriter.WriteLine(txtHours.Text);
                     MessageBox.Show("Employee has been saved", "Save Successful", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     txtName.Clear();
                     txtNumber.Clear();
@@ -141,5 +157,7 @@ namespace Assignment_KaylaStacey
             }
             Application.Exit();
         }
+
+
     }
 }

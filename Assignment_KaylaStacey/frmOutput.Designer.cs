@@ -36,10 +36,11 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtWage = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
             this.btnExit = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
+            this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.SuspendLayout();
             // 
             // label1
@@ -112,13 +113,13 @@
             this.label5.TabIndex = 12;
             this.label5.Text = "Weekly Pay";
             // 
-            // textBox1
+            // txtWage
             // 
-            this.textBox1.Location = new System.Drawing.Point(221, 247);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(147, 22);
-            this.textBox1.TabIndex = 13;
+            this.txtWage.Location = new System.Drawing.Point(221, 247);
+            this.txtWage.Name = "txtWage";
+            this.txtWage.ReadOnly = true;
+            this.txtWage.Size = new System.Drawing.Size(147, 22);
+            this.txtWage.TabIndex = 13;
             // 
             // label6
             // 
@@ -147,6 +148,11 @@
             this.btnNext.TabIndex = 16;
             this.btnNext.Text = "&Next";
             this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // openFileDialog1
+            // 
+            this.openFileDialog1.FileName = "openFileDialog1";
             // 
             // frmOutput
             // 
@@ -156,7 +162,7 @@
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtWage);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.txtHours);
             this.Controls.Add(this.txtNumber);
@@ -187,9 +193,10 @@
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.TextBox txtWage;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnNext;
+        private System.Windows.Forms.OpenFileDialog openFileDialog1;
     }
 }

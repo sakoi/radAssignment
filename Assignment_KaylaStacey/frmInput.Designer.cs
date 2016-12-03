@@ -153,6 +153,7 @@
             // 
             // btnExit
             // 
+            this.btnExit.DialogResult = System.Windows.Forms.DialogResult.Cancel;
             this.btnExit.Location = new System.Drawing.Point(426, 321);
             this.btnExit.Name = "btnExit";
             this.btnExit.Size = new System.Drawing.Size(75, 30);
@@ -196,6 +197,7 @@
             this.Name = "frmInput";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Input Form";
+            this.WindowState = System.Windows.Forms.FormWindowState.Minimized;
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmInput_FormClosing);
             this.Load += new System.EventHandler(this.frmInput_Load);
             this.grpEmployeeInformation.ResumeLayout(false);
