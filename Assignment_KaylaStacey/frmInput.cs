@@ -19,7 +19,7 @@ namespace Assignment_KaylaStacey
 {
     public partial class frmInput : Form
     {
-
+        //module level variables
         private StreamWriter employeeStreamWriter;
         private String path;
 
@@ -30,24 +30,25 @@ namespace Assignment_KaylaStacey
 
         private void btnExit_Click(object sender, EventArgs e)
         {
-            //Close application
+            //Close StreamWriter
             if(employeeStreamWriter != null)
             {
                 employeeStreamWriter.Close();
             }
+            //Close application
             Application.Exit();
         }
 
         private void frmInput_Load(object sender, EventArgs e)
         {
-            //run save file dialog box
+            //Open saveFileDialog 
             saveFileDialog();
             
         }
 
         private bool IsValidData()
         {
-            //checks if inputs are valid
+            //Checks that all user inputs are valid
             return Validator.IsPresent(txtName) &&
                    Validator.IsPresent(txtNumber) &&
                    Validator.IsPresent(txtHours) &&
@@ -57,45 +58,41 @@ namespace Assignment_KaylaStacey
 
         private void saveFileDialog()
         {
-            //save file dialog and prompts to user to select file
+            //Prompts the user to select or save a file 
+
             DialogResult result;
 
-
-            //set saveFileDialog settings
+            //Set saveFileDialog settings
             saveFileDialog1.InitialDirectory = Directory.GetCurrentDirectory();
             saveFileDialog1.DefaultExt = "txt";
             saveFileDialog1.Title = "Save File";
             saveFileDialog1.Filter = "Text File(*.txt|*.txt|All Files(*.*)|*.*";
 
-            //save user selection
+            //Ask user for selection or creation
             result = saveFileDialog1.ShowDialog();
 
             if(result != DialogResult.Cancel)
             {
                 try
                 {
-
                     //Creates file or appends to existing file
                     employeeStreamWriter = new StreamWriter(saveFileDialog1.FileName, true);
                     
-                    //find file path
+                    //Save the file path
                     path = Path.GetFullPath(saveFileDialog1.FileName);
-                   // MessageBox.Show(path);
-                  
-
                 }
                 catch (Exception ex1)
                 {
                     MessageBox.Show(ex1.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
 
-                //set windowstate to normal (fix minimized bug)
+               //set windowstate to normal
+               //fixes the minimized bug where once a user save a file the frmInput would say minimized
                this.WindowState = FormWindowState.Normal;
-
             }
             else
             {
-                //Close Application            
+                //If user did not select a file, close Application            
                 Application.Exit();
             }
 
@@ -110,14 +107,12 @@ namespace Assignment_KaylaStacey
             txtName.Focus();
         }
 
-        //
-
-
         private void btnDone_Click(object sender, EventArgs e)
         {
+            //Close StreamWriter
             employeeStreamWriter.Close();
 
-            //Hid Input form and Shows Output form
+            //Hide frmInput and create new frmOutput and set the filepath to saved path
             frmOutput outputForm = new frmOutput();
             outputForm.filePath = path;
             this.Hide();
@@ -129,7 +124,8 @@ namespace Assignment_KaylaStacey
             //Checks all inputs are valid, if so save to file
             if (IsValidData())
             {
-                //If ok, write inputs into StreamWriter, clear textboxes, and displays message to user on success
+                //Write valid inputs into StreamWriter, clear textboxes,
+                //and displays message to user on successful save
                 try
                 {
                     employeeStreamWriter.WriteLine(txtName.Text);
@@ -150,14 +146,14 @@ namespace Assignment_KaylaStacey
 
         private void frmInput_FormClosing(object sender, FormClosingEventArgs e)
         {
-            //Close application
+            //Close StreamWriter
             if (employeeStreamWriter != null)
             {
                 employeeStreamWriter.Close();
             }
+            //Close Application
             Application.Exit();
         }
-
 
     }
 }

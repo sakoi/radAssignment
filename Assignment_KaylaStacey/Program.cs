@@ -1,4 +1,8 @@
-﻿using System;
+﻿/*
+ * Name: Kayla Wiest and Stacey Stewart
+ * Date: Nov 30, 2015
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;

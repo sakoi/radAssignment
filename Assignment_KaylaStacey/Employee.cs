@@ -1,4 +1,9 @@
-﻿using System;
+﻿/*
+ * Name: Kayla Wiest and Stacey Stewart
+ * Date: Nov 30, 2015
+ * Purpose: A Employee class with a constructor and property fieldss
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,8 +14,10 @@ namespace Assignment_KaylaStacey
     class Employee
     {
 
+        //module level variables
         private String name, number;
         private decimal hours;
+        //module level constaints
         private const decimal wage = 10.50m;
         
         public Employee(String name, String number, decimal hours)
@@ -22,6 +29,7 @@ namespace Assignment_KaylaStacey
 
         }
 
+        //Property fields for Name
         public String Name{
             get
             {
@@ -31,8 +39,9 @@ namespace Assignment_KaylaStacey
             {
                 name = value;
             }
-        }//end name
+        }
 
+        //Property fields for Number
         public String Number
         {
             get
@@ -43,8 +52,9 @@ namespace Assignment_KaylaStacey
             {
                 number = value;
             }
-        }//end number
+        }
 
+        //Property fields for Hours
         public decimal Hours
         {
             get
@@ -55,12 +65,13 @@ namespace Assignment_KaylaStacey
             {
                 hours = value;
             }
-        }//end hours
+        }
 
+        //Method to calculate the wage of a employee by 
+        //multiplying hours and wage rate
         public decimal getPay()
         {
-            decimal pay= 0;
-
+            decimal pay = 0;
             pay = Hours * wage;
 
             return pay;

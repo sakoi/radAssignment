@@ -41,6 +41,7 @@
             this.btnExit = new System.Windows.Forms.Button();
             this.btnNext = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
+            this.label7 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // label1
@@ -154,11 +155,22 @@
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label7.Location = new System.Drawing.Point(332, 384);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(238, 17);
+            this.label7.TabIndex = 17;
+            this.label7.Text = "Kayla Wiest and Stacey Stewart";
+            // 
             // frmOutput
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(582, 410);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.btnNext);
             this.Controls.Add(this.btnExit);
             this.Controls.Add(this.label6);
@@ -177,6 +189,7 @@
             this.Name = "frmOutput";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Output Form";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.frmOutput_FormClosing);
             this.Load += new System.EventHandler(this.frmOutput_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -198,5 +211,6 @@
         private System.Windows.Forms.Button btnExit;
         private System.Windows.Forms.Button btnNext;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
+        private System.Windows.Forms.Label label7;
     }
 }
